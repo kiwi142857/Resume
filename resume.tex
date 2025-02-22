@@ -1,0 +1,135 @@
+\documentclass[a4paper]{article}
+\usepackage[UTF8]{ctex}  % 中文支持
+\usepackage{geometry}
+\usepackage{fontawesome}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+% 页面设置
+\geometry{left=1.8cm,right=1.8cm,top=1cm,bottom=1cm,includefoot}
+
+% 颜色定义
+\definecolor{mainred}{RGB}{204,0,0}
+\definecolor{darkgray}{RGB}{73,73,73}
+
+% 超链接设置
+\hypersetup{
+    colorlinks=true,
+    linkcolor=mainred,
+    filecolor=mainred,
+    urlcolor=darkgray,
+}
+
+% 节标题格式
+\titleformat{\section}
+{\color{mainred}\Large\bfseries}
+{}{0em}{\faGraduationCap\quad}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+% 设置行距
+\linespread{1.1}
+
+\begin{document}
+% 移除页码
+\pagenumbering{gobble}
+
+% 标题部分
+\begin{minipage}{0.75\textwidth}
+\hspace{-1em}
+{\huge\bfseries 姓名(约3-4字)}\medskip
+
+\vspace{0.5em}
+\hspace{-0.5em}
+\begin{tabular}{@{}l@{\hspace{0.4em}}l@{\hspace{3.5em}}l@{}}
+{\color{darkgray}\faPhone} & 131-XXXX-XXXX & {\color{darkgray}\faCalendar} XXXX.XX.XX \\
+{\color{darkgray}\faEnvelope} & xxxxx@xxx.edu.cn & {\color{darkgray}\faUser} 政治面貌(4字) \\
+{\color{darkgray}\faGithub} & \href{https://github.com/username}{\color{darkgray}github用户名} & {\color{darkgray}\faHome} \href{https://xxx.github.io}{\color{darkgray}个人主页}
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+\hspace{0.5em}
+\includegraphics[width=2.8cm]{kiwi_ref.jpeg}
+\end{minipage}
+
+\section*{教育背景}
+\noindent\textbf{\large XX大学} \textbf{XX工程专业} \hfill XXXX.XX - 至今\\
+\vspace{1em}
+\textit{学积分: XX.X/100 (专业排名: XX/XX)} \hfill \textit{GPA: X.XX/4.30 (专业排名: XX/XX)}\\
+
+\vspace{-1.8em}
+\noindent\textbf{主要荣誉}
+\begin{itemize}[leftmargin=*,itemsep=0em,topsep=0em]
+\item XX奖学金 \hfill XXXX-XXXX学年
+\item XX大学优秀本科生奖学金 \hfill XXXX-XXXX学年
+\item XX大学优秀学生干部、优秀团员 \hfill XXXX-XXXX学年
+\end{itemize}
+
+\section*{项目经历}
+\begin{itemize}[leftmargin=*,label={},itemsep=0.3em,topsep=0.1em]
+\item \textbf{\href{项目链接}{项目名称(约15-20字)}} \hfill \textit{XXXX.XX - XXXX.XX}\\
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+
+
+\item \textbf{\href{项目链接}{项目名称(约15-20字)}}  \hfill \textit{XXXX.XX - XXXX.XX}\\
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+
+
+\item \textbf{\href{项目链接}{项目名称(约15-20字)}} \hfill \textit{XXXX.XX - XXXX.XX}\\
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+
+
+\item \textbf{\href{项目链接}{项目名称(约15-20字)}} \hfill \textit{XXXX.XX - XXXX.XX}\\
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+
+
+\item \textbf{\href{项目链接}{项目名称(约15-20字)}} \hfill \textit{XXXX.XX - XXXX.XX}\\
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+项目描述第一行(约45-50字)。项目描述第二行(约45-50字)。
+
+\end{itemize}
+
+\section*{校园经历与实习经历}
+\hspace{-0.5cm}
+\begin{minipage}[t]{0.37\textwidth}
+\textbf{学生工作}
+\begin{itemize}[leftmargin=*,itemsep=0em,topsep=0em]
+\item XX学院学生会成员
+\item 班级XX委员
+\item XX计划成员
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.37\textwidth}
+\textbf{社会实践}
+\begin{itemize}[leftmargin=*,itemsep=0em,topsep=0em]
+\item XX社会实践项目(约15字)
+\item XX社会实践项目(约15字)
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.26\textwidth}
+\textbf{实习经历}
+\begin{itemize}[leftmargin=*,itemsep=0em,topsep=0em]
+\item XX科技实习生\\
+\textit{XXXX.XX - XXXX.XX}
+\end{itemize}
+\end{minipage}
+
+\section*{专业技能}
+\begin{itemize}[leftmargin=*,itemsep=0.1em,topsep=0.1em]
+\item \textbf{编程语言}：精通C/C++，熟练掌握Python、Java、JavaScript，了解Swift
+\item \textbf{开发技能}：微服务架构设计、DevOps、大模型部署优化、安全计算、分布式系统
+\item \textbf{语言能力}：英语六级，技术文档阅读写作能力强
+\end{itemize}
+
+\end{document} 
