@@ -1,120 +1,124 @@
-\documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{geometry}
-\usepackage{fontawesome}
-\usepackage{titlesec}
-\usepackage{enumitem}
-\usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{amsmath}
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
 
-% Page settings
-\geometry{left=1.6cm,right=1.6cm,top=1.2cm,bottom=1.2cm,includefoot}
+\documentclass[10pt, a4paper]{awesome-cv}
 
-% Colors
-\definecolor{mainred}{RGB}{204,0,0}
-\definecolor{darkgray}{RGB}{73,73,73}
+\geometry{left=1.15cm, top=.6cm, right=1.15cm, bottom=.7cm, footskip=.25cm}
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\renewcommand{\acvHeaderAfterNameSkip}{.2mm}
+\renewcommand{\acvHeaderAfterPositionSkip}{.2mm}
+\renewcommand{\acvHeaderAfterAddressSkip}{-.8mm}
+\renewcommand{\acvHeaderAfterSocialSkip}{1.6mm}
+\renewcommand{\acvSectionTopSkip}{1.2mm}
+\renewcommand{\acvSectionContentTopSkip}{1.0mm}
 
-% Hyperlink setup
-\hypersetup{
-    colorlinks=true,
-    linkcolor=mainred,
-    urlcolor=darkgray,
-}
-
-% Section title format
-\titleformat{\section}
-{\color{mainred}\large\bfseries}
-{}{0em}{\faGraduationCap\quad}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{6pt}
-
-% Item spacing tighten
-\setlist[itemize]{leftmargin=*,itemsep=0.25em,topsep=0.25em}
-
-% Line spacing
-\linespread{1.15}
+\name{Qiwei}{Chen}
+\position{Software Engineering Undergraduate{\enskip\cdotp\enskip}Embodied AI \& ML Systems}
+\address{Shanghai Jiao Tong University, Shanghai, China}
+\mobile{(+86) 131-2312-8852}
+\email{qiweic10@sjtu.edu.cn}
+\github{kiwi142857}
+\extrainfo{\href{https://kiwi142857.github.io/kiwi142857.github.io/}{\faHouseChimney\ Homepage}}
+\photo[rectangle,edge,right]{Kiwi_陈启炜}
 
 \begin{document}
-\pagenumbering{gobble}
 
-% Header
-\begin{minipage}{0.8\textwidth}
-{\huge\bfseries Chen Qiwei}\\[-0.3em]
-{\normalsize\textit{Kiwi Chen}} \medskip
+\makecvheader[C]
+\makecvfooter{}{}{}
 
-\vspace{0.5em}
-\hspace{-0.5em}  % shift left
-\begin{tabular}{@{}l@{\hspace{0.5em}}l@{\hspace{4em}}l@{}}
-{\color{darkgray}\faPhone} & 131-2312-8852 & {\color{darkgray}\faCalendar} Sep 21, 2003 \\
-{\color{darkgray}\faEnvelope} & qiweic10@sjtu.edu.cn & {\color{darkgray}\faUser} CPC Member \\
-{\color{darkgray}\faGithub} & \href{https://github.com/kiwi142857}{\color{darkgray}kiwi142857} & {\color{darkgray}\faHome} \href{https://kiwi142857.github.io/kiwi142857.github.io/}{\color{darkgray}Homepage}
-\end{tabular}
-\end{minipage}
-\begin{minipage}{0.2\textwidth}  % shrink right column
-\hspace{0.5em}  % shift right
-\includegraphics[width=2.8cm]{Kiwi_陈启炜.jpg}
-\end{minipage}
+\cvsection{Education}
+\begin{cventries}
+  \cventry
+    {B.S. in Software Engineering}
+    {Shanghai Jiao Tong University}
+    {Shanghai, China}
+    {Aug. 2022 - Jun. 2026}
+    {
+      \begin{cvitems}
+        \item {Academic score: 91.1/100 (rank 8/89); GPA: 3.92/4.30 (rank 9/89).}
+        \item {Honors include Jiangshi Scholarship, 85th CS Education Development Fund \& Yang Yuanqing Education Fund Scholarship, Gold Medal at China International College Students' Innovation Competition (Shanghai Division), Huawei RoboMind Winter Camp First Prize, and OpenHarmony Training Camp National Third Prize.}
+      \end{cvitems}
+    }
+\end{cventries}
 
-\vspace{-1em}
-\section*{Education}
-\textbf{Shanghai Jiao Tong University}, B.S. in Software Engineering \hfill Aug 2022 -- Present \\
-\textit{Score: 91.1/100 (Rank: 8/89)} \hfill \textit{GPA: 3.92/4.30 (Rank: 9/89)}
+\cvsection{Publication}
+\begin{cventries}
+  \cventry
+    {Kaijun Zhou, Qiwei Chen, Da Peng, Zhiyang Li, Xijun Li, and Jinyu Gu}
+    {\href{https://arxiv.org/abs/2604.24447}{Characterizing Vision-Language-Action Models across XPUs: Constraints and Acceleration for On-Robot Deployment}}
+    {ICML}
+    {2026}
+    {}
+\end{cventries}
 
-\textbf{Honors \& Awards}
-\begin{itemize}[leftmargin=*,itemsep=0.2em,topsep=-0.1em]
-\item Jiangshi Scholarship \hfill 2023--2024
-\item SJTU Outstanding Undergraduate Scholarship \hfill 2022--2024
-\item SJTU Outstanding League Member \& Student Leader \hfill 2023--2024
-\item 85th CS Education Development Fund \& Yang Yuanqing Education Fund Scholarship \hfill 2024--2025
-\item Gold Medal, China International College Students’ Innovation Competition (Shanghai Division) \hfill 2024--2025
-\end{itemize}
+\cvsection{Selected Projects}
+\begin{cventries}
+  \cventry
+    {Ascend 310P, RK3588, OpenHarmony, llama.cpp}
+    {VLA/VLM Edge Deployment and Inference Optimization}
+    {}
+    {May 2025 - Aug. 2025}
+    {
+      \begin{cvitems}
+        \item {Adapted and optimized VLA, VLM, and SAM2 models on domestic edge accelerators under tight latency and memory constraints.}
+        \item {Implemented RK3588 operator and memory optimizations on OpenHarmony, and upstreamed a llama.cpp-based VLM optimization to the open-source community.}
+      \end{cvitems}
+    }
 
-\section*{Projects}
-\begin{itemize}
-\item \textbf{Minik8s} (Lead) \hfill Mar 2025 -- Jun 2025 \\
-Developed a lightweight Kubernetes-like orchestrator with pod scheduling, service discovery, and load balancing; implemented pod lifecycle management and a custom controller framework.
-\item \textbf{OpenTrustee LLM} \hfill Sep 2024 -- Nov 2024 \\
-Enabled secure on-device LLM inference using TEE + llama.cpp; protected model assets via trusted execution and optimized performance by parallelizing model loading and decryption.
-\item \textbf{CHFS Distributed FS} \hfill Sep 2024 -- Jan 2025 \\
-Built a GFS-style distributed file system with inode-based metadata, logging, and snapshots; implemented Raft-based replication with automatic failure recovery.
-\item \textbf{ICS Lab Exercises} \hfill Aug 2024 -- May 2025 \\
-Developed LLMLab modules with parallelism and KV-cache optimization for Transformers; designed and deployed an online grading system.
-\item \textbf{VLA/VLM Edge Deployment} \hfill May 2025 -- Aug 2025 \\
-Optimized VLA, VLM, and SAM2 models on Ascend 310P and RK3588; performed operator and memory tuning under OpenHarmony; contributed patches to the \texttt{llama.cpp} open-source community.
-\item \textbf{UniGPT Prompt Platform} (Lead) \hfill Feb 2024 -- Sep 2024 \\
-Led a 4-person team to build a Kubernetes-based LLM prompt platform; integrated LLMs via langchain4j; awarded at the College Software Fair.
-\end{itemize}
+  \cventry
+    {VLA models, Ascend CANN, open-source community}
+    {\href{https://gitcode.com/cann/cann-recipes-embodied-intelligence}{CANN Embodied Intelligence Community Contribution}}
+    {}
+    {2025}
+    {
+      \begin{cvitems}
+        \item {Implemented Ascend platform recipes for VLA models including pi0, ACT, and Diffusion Policy, improving reproducibility for embodied-AI deployment on Ascend hardware.}
+      \end{cvitems}
+    }
 
-\section*{Research Interests}
-\begin{itemize}
-\item \textbf{Machine Learning Systems:} Large-scale training, inference optimization, edge deployment
-\item \textbf{Quantitative Trading Systems:} Low-latency infrastructure, algorithmic strategy backtesting, risk control
-\item \textbf{Cloud Native Infrastructure:} Kubernetes, distributed systems, container orchestration
-\end{itemize}
+  \cventry
+    {Transformer parallelism, KV cache, grading infrastructure}
+    {ICS Course Lab Optimization}
+    {}
+    {Aug. 2024 - May 2025}
+    {
+      \begin{cvitems}
+        \item {Designed LLMLab modules for Transformer parallelism and KV-cache optimization, with evaluation workflows for student implementations.}
+        \item {Migrated the course platform from SVN to Git and built an online grading and score-query system.}
+      \end{cvitems}
+    }
 
-\section*{Activities \& Internships}
-\begin{minipage}[t]{0.33\textwidth}
-\textbf{Student Roles}
-\begin{itemize}
-\item Siyuan Project (Youth League)
-\item Student Union (SEIEE)
-\end{itemize}
-\end{minipage}%
-\begin{minipage}[t]{0.33\textwidth}
-\textbf{Social Practice}
-\begin{itemize}
-\item Siyuan Xiaoxiang Trip
-\item Singapore \& Malaysia Summer Practice
-\end{itemize}
-\end{minipage}%
-\begin{minipage}[t]{0.33\textwidth}
-\textbf{Internships}
-\begin{itemize}
-\item IPADS (Distributed Systems Institute)
-\item JiangRan Technology
-\end{itemize}
-\end{minipage}
+  \cventry
+    {TEE, OpenTrustee, llama.cpp}
+    {OpenTrustee LLM Secure On-Device Inference}
+    {}
+    {Sep. 2024 - Nov. 2024}
+    {
+      \begin{cvitems}
+        \item {Built trusted-execution model loading and inference modules to protect model parameters, then reduced bottlenecks through parallel model loading and decryption.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Team lead; Kubernetes-style scheduler and services}
+    {\href{https://github.com/kiwi142857/Minik8s}{Minik8s Lightweight Orchestration System}}
+    {}
+    {Mar. 2025 - Jun. 2025}
+    {
+      \begin{cvitems}
+        \item {Led development of a simplified Kubernetes cluster orchestrator with pod scheduling, service discovery, and load balancing.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\cvsection{Skills}
+\begin{cvskills}
+  \cvskill{Languages}{C/C++, Python, Java, Bash}
+  \cvskill{ML Systems}{VLA models, LeRobot, llama.cpp, vLLM, Transformer optimization, edge inference}
+  \cvskill{Systems}{Distributed systems, Kubernetes, TEE, OpenHarmony, Ascend CANN}
+  \cvskill{Languages}{CET-6; strong technical reading and writing in English}
+\end{cvskills}
 
 \end{document}

@@ -49,11 +49,12 @@ img_zh: $(ZH_PDF)
 	convert -density 1080 $(ZH_PDF) -quality 90 $(ZH_PDF:.pdf=.jpg)
 
 img_en: $(EN_PDF)
-	convert -density 1080 $(EN_PDF) -quality 90 $(EN_PDF:.pdf=.jpg)
+	pdftoppm -jpeg -r 300 $(EN_PDF) $(EN_PDF:.pdf=_preview)
+	mv $(EN_PDF:.pdf=_preview)-1.jpg $(EN_PDF:.pdf=.jpg)
 
 # 清理临时文件和PDF
 clean:
 	rm -f $(TEMP_EXT) $(ZH_PDF) $(EN_PDF) $(REF_PDF) $(IMG_EXT)
 
 # 声明伪目标
-.PHONY: all zh en ref clean 
+.PHONY: all zh en ref clean
