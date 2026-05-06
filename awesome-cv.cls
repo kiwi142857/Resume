@@ -522,7 +522,9 @@
         {\def\@photoborder{darkgray}}%
         {\def\@photoborder{none}}%
       \begin{tikzpicture}%
-        \node[\@photoshape, draw=\@photoborder, line width=0.3mm, inner sep=\photodim, fill overzoom image=\@photo] () {};
+        \ifthenelse{\equal{\@photoshape}{circle}}%
+          {\node[\@photoshape, draw=\@photoborder, line width=0.3mm, inner sep=\photodim, fill overzoom image=\@photo] () {};}%
+          {\node[draw=\@photoborder, line width=0.3mm, inner sep=0pt] () {\includegraphics[height=3.6cm,keepaspectratio]{\@photo}};}%
       \end{tikzpicture}
     }%
   }
